@@ -6726,7 +6726,7 @@ exports.getInput = getInput;
  * @param     value    value to store
  */
 function setOutput(name, value) {
-    command_1.issueCommand('set-output', { name }, value);
+    __webpack_require__(747).writeFileSync(process.env['GITHUB_OUTPUT'], name + '=' + value + '\n', { encoding: 'utf8', flag: 'a' });
 }
 exports.setOutput = setOutput;
 //-----------------------------------------------------------------------
